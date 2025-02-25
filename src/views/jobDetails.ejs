@@ -1,0 +1,94 @@
+<main class="jobdetailsmain">
+    <div class="jobapplymain">
+        <div class="jobapplydiv">
+            <div class="jobbannerdiv">
+                <img src="/Banner1.jpeg" alt="">
+            </div>
+            <div class="jobtitle">
+                <h2><span class="jobrole"><%=jobD.role%></span> oppertunity in PUNE IND ON-SITE at <span class="companyname"><%=jobD.companyName%></span></h2>
+            </div>
+            <div class="jobdescription">
+                <div class="jobapplybtns">
+                    <input type="hidden" name="id" id="id" value="<%=id%>">
+                    <button>Actively hiring</button>
+                    <%if(locals.userEmail){%>
+                    <a href="/updatejob/<%=jobD.companyName%>/<%=jobD.location%>/<%=id%>"><i class="fa-solid fa-file-pen"></i></a>
+                    <a href="/deletejob/<%=id%>"><i class="fa-solid fa-trash"></i></a>
+                    <%}%>
+                </div>
+                <div class="jobapplycompany">
+                    <h3><%=jobD.companyName%></h3>
+                    <p>Tech <%=jobD.role%></p>
+                </div>
+                <div class="jobapplydes">
+                    <p><i class="fa-solid fa-location-dot"></i> Location : <%=jobD.location%></p>
+                    <p><i class="fa-solid fa-indian-rupee-sign"></i> Salary : <%=jobD.salary%>LPA</p>
+                    <p><i class="fa-solid fa-hourglass-end"></i> Apply By : <%=jobD.applydate%></p>
+                    <p><i class="fa-solid fa-chart-simple"></i> Number of Openings : <%=jobD.position%></p>
+                    <a href="/viewapplicants/<%=id%>"><i class="fa-solid fa-person"></i>Applicants : <%=numofApplicants%></a>
+                </div>
+                <div class="jobapplyskill">
+                  <%if(typeof(jobD.skills) === "string"){%>
+                    <button><%=jobD.skills%></button>
+               <% }else{ %>
+               <% jobD.skills.forEach((skill)=>{ %>
+                  <button><%=skill%></button>
+               <% }) %>
+               <%}%>
+                </div>
+
+                <div class="jobapplyopt">
+                  <%if(!locals.userEmail){%>
+                    <button class="jobapplybtn">Apply Now</button>
+                  <%}%>
+                    <p class="postedDate">Posted-Date : <%=jobD.jobposteddate%></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<!-- Job Apply POP UP-->
+<div class="popupDiv jobapplypopup">
+    <div class="pop1">
+      <div class="subpops headpop">
+        <h2>Apply Now !!</h2>
+        <button class="closePop1">X</button>
+      </div>
+      <div class="subpops mainpop">
+        <form action="/applyjob" class="formpop" method="post" enctype="multipart/form-data">
+
+          <input type="hidden" name="jobid" id="jobid" value="<%=id%>">
+          <div class="popinputs">
+            <label for="Name">Name :</label>
+            <input type="text" id="name" name="name" placeholder="enter your Name" required>
+          </div>
+    
+          <div class="popinputs">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="enter your Email" required>
+          </div>
+    
+          <div class="popinputs">
+            <label for="phone">Contact :</label>
+          <input type="tel" id="phone" name="phone" placeholder="enter your Contact" required>
+          </div>
+
+          <div class="popinputs resumeinp">
+            <label for="file">Resume :</label>
+          <input type="file" id="file" name="file" required>
+          </div>
+
+    
+          <div class="popinputs">
+            <button type="submit" class="regbtn">Submit</button>
+          </div>
+        </form>
+    
+      </div>
+      </div>
+    </div>
+    </div>
+    <!-- END OF POP UP -->
+     <script src="/jobApply.js"></script>

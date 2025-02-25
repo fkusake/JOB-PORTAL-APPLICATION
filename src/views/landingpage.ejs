@@ -1,0 +1,110 @@
+
+
+  <!-- Main -->
+   <main>
+<section class="mainsec landingsection">
+    <div class="mainDiv">
+      <div class="subdiv contentDiv">
+
+        <div class="sub1 paraDiv">
+        <h1 class="header h1">A Comprehensive Platform For Reliable....</h1>
+        <h2 class="header h2">Job Opportunities And Internships.</h2>
+        <h3 class="header h3">Get Discovered. Get Hired.</h3>
+        </div>
+
+        <div class="sub1 btnDiv">
+          <a href="/postedjobs"  class="sub1btn popupseeker">I'm A Job Seeker</a>
+          <% if(!locals.userEmail){ %>
+          <button class="sub1btn popupsbut1">I'm A Recruiter</button>
+          <%}%>
+        </div>
+
+      </div>
+      <div class="subdiv imageDiv">
+        <div class="sub2">
+          <img src="image 5.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- End of Landing Page -->
+
+</main>
+<!-- POP UP DIVS -->
+
+<!-- POP 1 -->
+<div class="popupDiv">
+<div class="pop1">
+  <div class="subpops headpop">
+    <h2>Experience easily!</h2>
+    <button class="closePop1">X</button>
+  </div>
+  <div class="subpops mainpop">
+    <form action="/newuser" class="formpop" method="post">
+
+      <div class="popinputs">
+        <label for="Name">Name</label>
+        <input type="text" id="name" name="name" placeholder="enter your Name" required>
+      </div>
+
+      <div class="popinputs">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="enter your Email" required>
+      </div>
+
+      <div class="popinputs">
+        <label for="pass">Password</label>
+      <input type="password" id="pass" name="pass" placeholder="enter your Password" required>
+      </div>
+
+      <div class="popinputs">
+        <button type="submit" class="regbtn">Register</button>
+      </div>
+    </form>
+
+  </div>
+  <div class="subpops footpop">
+    <div class="footdiv footcontent">
+      <p>Already registered?</p>
+      <button class="pop1login">Login</button>
+    </div>
+
+    <div class="footdiv">
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-whatsapp"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-linkedin"></i>
+    </div>
+  </div>
+</div>
+</div>
+<!-- END OF POP 1 -->
+
+<!-- POP 2 -->
+<div class="popupDiv2">
+<div class="pop2">
+  <div class="subpops headpop">
+    <h2>Experience easily!</h2>
+    <button class="closePop2">X</button>
+  </div>
+  <div class="subpops mainpop">
+    <form action="/userlogin" class="formpop" method="post">
+      <div class="popinputs">
+        <label for="logemail">Email</label>
+        <input type="email" id="logemail" name="email" placeholder="enter your Email" required>
+      </div>
+
+      <div class="popinputs">
+        <label for="logpass">Password</label>
+      <input type="password" id="logpass" name="pass" placeholder="enter your Password" required>
+      </div>
+
+      <div class="popinputs pop2login">
+        <button type="submit">LOGIN</button>
+      </div>
+    </form>
+    </div>
+</div>
+</div>
+<script src="/main.js"></script>

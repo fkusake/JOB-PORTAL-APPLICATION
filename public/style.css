@@ -1,0 +1,705 @@
+ body{
+    padding: 0px;
+    margin: 0px;
+    font-size: 20px;
+    overflow-x: hidden; 
+    width: 100vw;
+    height: 100vh; 
+    max-width: 100%;
+}
+
+
+/* Header CSS */
+.navbar {
+    box-shadow: 2px 0px 1px white;
+    background-color: black;
+    width: 100vw;
+    padding: 1em;
+}
+
+.navbar .a1{
+    color: gray;
+    font-weight: lighter;
+}
+.navbar .logo{
+    color: white;
+    font-weight: bolder;
+}
+.navbar .a1:hover{
+    color: white;
+}
+
+.navbar .a2{
+    color: gray;
+    font-size: 0.9em;
+    position: relative;
+    top:3px;
+    font-weight: lighter;
+}
+.navbar .a2:hover{
+    color: white;
+}
+    
+.navbar .a4{
+    font-weight: lighter;
+    font-size: 0.9em;
+    position: relative;
+    top:3px;
+}
+.navbar .gray{
+    color:gray !important;
+}
+
+.navbar .white{
+    color: white !important;
+}
+.a5:hover{
+    background-color: black;
+    color: white;
+}
+/* End of header CSS */
+
+/* Main CSS */
+
+main{
+    width: 100%;
+    height: 90%;
+    background-color:black;
+}
+.mainDiv{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height: 100%;
+    margin: auto;
+    background-color: black;
+    padding: 1.5em;
+    column-gap: 1.5em;
+}
+.subdiv{
+    width: 50%;
+    height: 100%;
+}
+
+.imageDiv{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.sub2{
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+.sub2 img{
+    width: 100%;
+    height: 90%;
+    margin-top: 1.5em;
+    border-radius: 10%;
+}
+.contentDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 0.5em;
+}
+.btnDiv{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+    padding: 0.5em;
+}
+.h1{
+    color: white;
+    font-weight: bolder;
+    border-radius:0.1em;
+    font-size: 1.9em;
+    text-transform: uppercase;
+    font-size: 72px;
+    background: -webkit-linear-gradient(#eee, #333);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.h2{
+    font-weight: lighter;
+    color: white;
+    background: -webkit-linear-gradient(#eee, #333);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.h3{
+    font-weight: lighter;
+    color: white;
+    font-size: 1.2em;
+     background: -webkit-linear-gradient(#eee, #333);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.paraDiv{
+    background-color: black;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+}
+.sub1btn{
+    background-color: white;
+    color: black;
+    padding: 1em;
+    border: none;
+    border-radius: 0.5em;
+    font-weight: bold;
+}
+
+.sub1btn:hover{
+    background-color: lightgray;
+}
+/* POP UPS */
+
+/* POP1 */
+.popupDiv{
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top: 0;
+    background-color: #333333b8;
+    display: none;
+}
+
+.pop1{
+    width: 30vw;
+    height: 60vh;
+    margin: auto;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.3em;
+    padding: 0.5em;
+    color: black;
+    background-color: white;
+    border-radius: 0.5em;
+    animation: popup 0.5s ease forwards;
+}
+@keyframes popup {
+    form{margin-top: 2em;}
+    to{margin-top: 7em;}
+}
+
+.subpops{
+    display: flex;
+    flex-direction: column;
+}
+.headpop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5em;
+    border-bottom: 1px solid black;
+}
+.headpop button{
+    border: none;
+    height: 1.5em;
+    margin-top: 0.3em;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+}
+
+
+
+.formpop{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2em;
+}
+.popinputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.popinputs input{
+    width: 80%;
+    padding: 0.1em;
+    border-radius: 0.5em;
+    border: none;
+    font-weight: lighter;
+    border: 1px solid black;
+}
+.popinputs label{
+    font-weight: 600;
+}
+.popinputs button{
+    border: none;
+    padding: 0.3em;
+    border-radius: 0.5em;
+    background-color: red;
+    color: white;
+}
+
+.footpop{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+}
+.footdiv{
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.3em;
+    align-items: center;
+}
+.footcontent p{
+    margin-top: 0.4em;
+}
+.footcontent button{
+    border: none;
+    border-radius: 0.4em;
+    background-color: red;
+    color: white;
+}
+
+.registerLink{
+    text-decoration: none;
+    color: white;
+}
+.popupseeker{
+    text-decoration: none;
+}
+
+/* POP2 */
+.popupDiv2{
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    top: 0;
+    background-color: #333333b8;
+    display: none;
+}
+.pop2{
+    width: 30vw;
+    height: 40vh;
+    margin: auto;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.3em;
+    padding: 0.5em;
+    color: black;
+    background-color: white;
+    border-radius: 0.5em;
+    animation: popup2 0.5s ease forwards;
+}
+@keyframes popup2 {
+    form{margin-top: 2em;}
+    to{margin-top: 7em;}
+}
+.pop2login{
+    margin: auto;
+}
+
+/* Login Form */
+.loginDiv{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.loginpage{
+    width: 40%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.3em;
+    padding: 0.5em;
+    color: black;
+    background-color: white;
+    border-radius: 0.5em;
+    margin: auto;
+    position: relative;
+    top: 4em;
+}
+.renderlog button{
+    margin: auto;
+}
+
+/* Error Page CSS */
+.errormain{
+    width: 100%;
+    height: 100%;
+}
+
+.page_404{ padding:40px 0; background:#fff; font-family: 'Arvo', serif;
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.page_404  img{ width:100%;}
+
+.four_zero_four_bg{
+ 
+ background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+    height: 400px;
+    background-position: center;
+ }
+ 
+ 
+ .four_zero_four_bg h1{
+ font-size:80px;
+ }
+ 
+  .four_zero_four_bg h3{
+			 font-size:80px;
+			 }
+			 
+			 .link_404{			 
+	color: #fff!important;
+    padding: 10px 20px;
+    background: #39ac31;
+    margin: 20px 0;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 0.5em;
+}
+	.contant_box_404{ margin-top:-50px;}
+
+    .col-sm-10{
+        width: 100%;
+    }
+
+    /* End of Error Page */
+
+/* JoBs Card CSS */
+.jobmain{
+    width: 100vw;
+    height: 100vh;
+}
+.jobscontainer{
+    border: 2px solid black;
+    background-color: black;
+    width: 100%;
+    height: auto;
+    padding: 0.8em;
+    display: flex;
+    flex-direction: row;
+    column-gap: 4.7em;
+    flex-wrap: wrap;
+    row-gap: 2em;
+}
+
+.jobsdiv{
+    background-color: white;
+    width: 15em;
+    height: 20em;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.8em;
+    border-radius: 0.5em;
+    position: relative;
+    transition: 0.5s ease;
+    margin-top: 2.5em;
+}
+.jobsdiv:hover{
+    transform: scale(1.1);
+}
+.jobheaddiv{
+    display: flex;
+    flex-direction: column;
+
+}
+.jobheaddiv button{
+    border: none;
+    background-color: black;
+    color: white;
+}
+.jobheaddiv p{
+    /* font-weight: bold; */
+    color: green;
+}
+.jobskillsdiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 0.5em;
+    row-gap: 0.2em;
+}
+.jobskillsdiv button{
+    border: 2px solid green;
+    background-color: black;
+    color: green;
+    border-radius: 0.3em;
+}
+.jobskillsdiv button:hover{
+    background-color: green;
+    color: white;
+}
+
+.jobdetailsdiv{
+    text-align: center;
+    margin-top: 0.4em;
+}
+.jobdetailsdiv a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    position: absolute;
+    padding: 0.3em;
+    border-radius: 0.5em;
+    right: 5em;
+    top:17.5em;
+}
+
+
+/* NEW JOB PAGE CSS */
+.newjobmain{
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+}
+
+.newjobmaindiv{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.newjobsub{
+    width: 70%;
+    height: 75%;
+    margin: auto;
+    padding: 0.5em;
+    position: absolute;
+    top:4em;
+    left: 12em;
+    background-color: white;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;  
+}
+.alertdiv{
+    width:70%;
+    margin-left: 12em;
+}
+.newjobsub h2{
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+
+.newjobform{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.9em;
+    padding: 0.5em;
+}
+.newjoblc{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.newjoblc input{
+    width: 80%;
+    border-radius: 0.5em;
+    border: 1px solid black;
+}
+.newjobpay{
+    display: flex;
+    flex-direction: row;
+    column-gap: 7em
+}
+.newjobpay input{
+    border: 1px solid black;
+    border-radius: 0.5em;
+}
+.newjobbtn{
+    width: 30%;
+    margin: auto;
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.5em;
+    background-color: red;
+    color: white;
+}
+.newjobdate input{
+    border: 1px solid black;
+    border-radius: 0.3em;
+    padding: 0.3em;
+}
+.newskillDiv{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2em;
+}
+
+
+/* JOB Details Section */
+.jobdetailsmain{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+.jobapplymain{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.jobapplydiv{
+    width: 90%;
+    height: 97%;
+    margin: auto;
+    position: absolute;
+    top:0.5em;
+    left: 4em;
+    background-color: white;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;  
+}
+.jobbannerdiv{
+    width: 100%;
+    height: 25%;
+    border-radius:  0.5em 0.5em 0em 0em;
+}
+.jobbannerdiv img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5em 0.5em 0em 0em;
+}
+.jobtitle{
+   width: 100%;
+   height: 10%;
+   text-align: center;
+}
+.jobtitle h2{
+    font-size: 2.2em;
+}
+.jobdescription{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    row-gap: 0.8em;
+    width: 100%;
+    height: 64%;
+}
+.jobapplycompany{
+    display: flex;
+    flex-direction: column;
+}
+.jobapplycompany p{ 
+    margin: 0;
+    padding: 0;
+}
+.jobapplycompany h3{
+    margin: 0;
+    padding: 0;
+}
+.jobapplydes{
+    display: flex;
+    flex-direction: column;
+}
+.jobapplydes p{
+    margin: 0;
+    padding: 0;
+}
+.jobapplyskill{
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.3em;
+}
+.jobapplyopt{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.2em;
+}
+.jobapplybtns{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+}
+.jobapplybtns button{
+    border: none;
+    color: white;
+    background-color: black;
+    padding: 0.1em;
+    border-radius: 0.3em;
+}
+.jobapplydes a{
+    color: red;
+    text-decoration: none;
+}
+.jobapplyskill button{
+    border: 2px solid green;
+    color: green;
+    background-color: black;
+    border-radius: 0.3em;
+}
+.jobapplyskill button:hover{
+    color: white;
+    background-color: green;
+}
+.jobapplyopt button{
+    width: 17em;
+    padding: 0.4em;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 0.5em;
+}
+.jobrole{
+    color: red;
+}
+.companyname{
+    color: red;
+}
+.postedDate{
+    background-color: green;
+    color: white;
+    width: 13em;
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+/* Job Apply CSS */
+.resumeinp input{
+    border: none;
+}
+.resumeBtn{
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    padding: 0.3em;
+    border-radius: 0.5em;
+}
+/* SuccessPage CSS */
+.succesmain{
+    width: 100vw;
+    height: 100vh;
+}
+.succesmaindiv{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.successub{
+    width: 50%;
+    height: 80%;
+    background-color: white;
+    position: absolute;
+    top:2em;
+    left: 19em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1em;
+    border-radius: 0.5em;
+}
+.successub img{
+    width: 50%;
+    height: 50%;
+}

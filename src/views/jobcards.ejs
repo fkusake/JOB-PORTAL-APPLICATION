@@ -1,0 +1,35 @@
+
+
+  <!-- Main -->
+   <main class="jobmain">
+    <div class="jobscontainer">
+
+    <%jobs.forEach((job)=>{%>
+        <div class="jobsdiv">
+            <!-- <input type="hidden" name="id" id="id" value="<%=job.id%>"> -->
+          <div class="jobinfo jobheaddiv">
+              <button>Actively hiring</button>
+              <h2><%=job.companyName%></h2>
+              <p>Role : <%= job.role %></p>
+          </div>
+          <div class="jobinfo">
+              <p><i class="fa-solid fa-location-dot"></i><%= job.location %></p>
+              <P><i class="fa-solid fa-indian-rupee-sign"></i> <%=job.salary%> LPA</P>
+          </div>
+          <div class="jobinfo jobskillsdiv">
+            <%if(typeof(job.skills) === "string"){%>
+                <button><%=job.skills%></button>
+           <% }else{ %>
+           <% job.skills.forEach((skill)=>{ %>
+              <button><%=skill%></button>
+           <% }) %>
+           <%}%>
+          </div>
+          <div class="jobinfo jobdetailsdiv">
+              <a href="/jobdetails/<%=job.id%>">View Details</a>
+          </div>
+      </div>
+    <%})%>
+       
+    </div>
+   </main>

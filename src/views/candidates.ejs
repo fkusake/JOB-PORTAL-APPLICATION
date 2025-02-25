@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Resume</th>
+      </tr>
+    </thead>
+    <tbody>
+       <% candy.forEach((i)=>{ %>
+            <tr>
+                <th scope="row"><%=i.id %></th>
+                <td><%=i.name %></td>
+                <td><%=i.email %></td>
+                <td><%=i.phone %></td>
+                <td><a href="/<%=i.pdfUrl%>" class="resumeBtn">Resume</a></td>
+              </tr>
+       <% }) %>
+    </tbody>
+  </table>

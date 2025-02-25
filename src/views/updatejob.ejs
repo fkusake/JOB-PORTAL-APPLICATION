@@ -1,0 +1,104 @@
+<main class="newjobmain">
+    <div class="newjobmaindiv">
+        <%if(errors){%>
+            <div class="alert alert-danger alertdiv" role="alert">
+              <%=errors%>
+              </div>
+            <%}%>
+        <div class="newjobsub">
+        <h2>UPDATE JOB</h2>
+        <form action="/jobupdated" class="newjobform" method="post">
+            <input type="hidden" name="datetime" id="datetime" value="<%=locals.dateTime%>">
+            <input type="hidden" name="id" id="id" value="<%=id%>">
+            <div class="newjobdiv">
+            <select class="form-select" aria-label="Default select example" required name="Type">
+                <option selected>Select Job category</option>
+                <option value="Tech">Tech</option>
+                <option value="Non Tech">Non Tech</option>
+              </select>
+              </div>
+
+              <div class="newjobdiv">
+              <select class="form-select" aria-label="Default select example" name="role" required>
+                <option selected>select Job designation</option>
+                <option value="HR">HR</option>
+                <option value="SDE">SDE</option>
+                <option value="DevOps">DevOps</option>
+                <option value="MERN DEVELOPER">MERN DEVELOPER</option>
+                <option value="MEAN DEVELOPER">MEAN DEVELOPER</option>
+                <option value="JAVA DEVELOPER">JAVA DEVELOPER</option>
+                <option value="FRONT-END DEVELOPER">FRONT-END DEVELOPER</option>
+                <option value="BACK-END DEVELOPER">BACK-END DEVELOPER</option>
+                <option value="FULL-STACK DEVELOPER">FULL-STACK DEVELOPER</option>
+              </select>
+              </div>
+
+              <div class="newjobdiv newjoblc">
+              <label for="joblocation">Enter Job Location :</label>
+              <input type="text" name="location" id="joblocation" required value="<%=location%>">
+              </div>
+
+              <div class="newjobdiv newjoblc">
+                <label for="company">Enter Company Name :</label>
+                <input type="text" name="company" id="company" required value="<%=companyName%>">
+                </div>
+
+                <div class="newjobdiv newjobpay">
+                    <div>
+                    <label for="salary">Enter Pay :</label>
+                    <input type="number" name="salary" id="salary" required min="1" placeholder="Enter per Annum">
+                    </div>
+                    <div>
+                    <label for="position">Total Positions :</label>
+                    <input type="number" name="position" id="position" required min="1">
+                    </div>
+                    </div>
+
+                    <div class="newjobdiv newskillDiv">
+                        <label for="">Skills :  </label>
+                        <div>
+                        <input type="checkbox" name="skills" id="skill1" value="React">
+                        <label for="skill1">React</label>
+                        </div>
+                        
+                        <div>
+                        <input type="checkbox" name="skills" id="skill2" value="Node.js">
+                        <label for="skill2">Node.js</label>
+                        </div>
+
+                        <div>
+                        <input type="checkbox" name="skills" id="skill3" value="JAVA">
+                        <label for="skill3">JAVA</label>
+                        </div>
+
+                        <div>
+                        <input type="checkbox" name="skills" id="skill4" value="JS">
+                        <label for="skill4">JS</label>
+                        </div>
+
+                        <div>
+                        <input type="checkbox" name="skills" id="skill5" value="SQL">
+                        <label for="skill5">SQL</label>
+                        </div>
+
+                        <div>
+                        <input type="checkbox" name="skills" id="skill6" value="MongoDB">
+                        <label for="skill6">MongoDB</label>
+                        </div>
+
+                        <div>
+                        <input type="checkbox" name="skills" id="skill7" value="Python">
+                        <label for="skill7">Python</label>
+                        </div>
+                    </div>
+
+                    <div class="newjobdiv newjobdate">
+                        <label for="date">Apply By :</label>
+                        <input type="date" name="date" id="date" required>
+                    </div>
+
+                    <button type="submit" class="newjobbtn">Submit</button>
+        </form>
+        </div>
+    </div>
+</main>
