@@ -7,7 +7,7 @@ export default class landingPage{
 
 // LandingPage Handler :
 getLandingPage(req,res){
-    return res.render("landingPage",{userEmail:req.session.userEmail,userName:req.session.userName})
+    return res.render("landingpage",{userEmail:req.session.userEmail,userName:req.session.userName})
 }
 // Get Login Page :
 getLoginPage(req,res){
